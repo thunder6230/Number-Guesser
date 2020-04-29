@@ -4,6 +4,8 @@ const playBtn = document.querySelector('#playBtn')
 const answer = document.querySelector('#answer')
 const minNum = document.querySelector('.min-num')
 const maxNum = document.querySelector('.max-num')
+const inputForm = document.querySelector('.input-form')
+const replayBtn = document.querySelector('.replayBtn')
 
 //game values
 const min = Math.floor(Math.random() * 10 + 1)
@@ -14,10 +16,12 @@ maxNum.innerHTML = max
 let guessLeft = 3
 console.log(botNum)
 
-playBtn.addEventListener('click', guessGame)
+replayBtn.addEventListener('click', function(){location.reload()})
+inputForm.addEventListener('submit', guessGame)
 
 
-function guessGame() {
+function guessGame(e) {
+    e.preventDefault()
     const guessNum = parseInt(document.querySelector('#inputNum').value)
     
     //validate
@@ -46,6 +50,7 @@ function guessGame() {
                 }
             } 
         }
+        
 }
     
 function setAnswer(msg, color){
@@ -63,6 +68,8 @@ function gameOver(won, msg){
     playBtn.disabled = true
     inputNum.style.borderColor = color
     answer.style.color = color
+    answer.style.fontWeight = 'bold'
     setAnswer(msg)
     inputNum.value = ""
+    replayBtn.style.display = 'inline'
 }

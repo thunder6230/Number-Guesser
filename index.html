@@ -12,12 +12,15 @@
     </header>
     <div class="container">
         <div class="input-div">
-            <p>Guess a number between <span class="min-num"></span> and <span class="max-num"></span>!</p><br>
-            <input type="text" id="inputNum" placeholder="Enter Your Guess ...">
-            <button id="playBtn">Play</button>
+            <p>Guess a number between <span class="min-num"></span> and <span class="max-num"></span>! Good Luck!</p><br>
+            <form class="input-form">
+                <input type="text" id="inputNum" placeholder="Enter Your Guess ...">
+                <button type="submit" id="playBtn">Submit</button>
+            </form>
         </div>
         <div class="answer-div">
-            <p id="answer"></p>
+            <p id="answer"></p><br>
+            <button class="replayBtn" style="display: none;">Want to play again?</button>
         </div>
     </div>
     

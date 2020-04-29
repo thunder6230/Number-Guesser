@@ -1,8 +1,57 @@
 body{
     background-color: rgb(247, 234, 212);
+    font-family: "Comic Sans MS", cursive, sans-serif
 }
 .header, .container {
     width: 75%;
     margin: 0 auto;
     text-align: center;
 }
+.header{
+    font-size: 30px;
+}
+button{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    width: 200px;
+    border-style: none;
+    border: 1px white solid;
+    height: 30px;
+    margin-left: 30px;
+}
+button:hover{
+    background-color: white;
+}
+input{
+    border-style: none;
+    border: 1px white solid;
+    height: 30px;
+    width: 200px;
+    text-align: center;
+}
+.input-form {
+    font-family: "Comic Sans MS", cursive, sans-serif
+}
+
+@media screen and (max-width: 960px) {
+    .header, .container {
+        width:90%;
+    }
+    .input-form {
+        display: inline;
+    }
+    input{
+        width: 400px;
+    }
+    button{
+        width: 400px;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    .header{
+        font-size: 25px;
+    }
+    p {
+        font-size: 18px;
+    }
+} 
+  
